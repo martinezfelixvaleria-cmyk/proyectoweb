@@ -43,24 +43,25 @@ nav a:hover{
     border-radius: 8px;
 }
 
+/* DISTRIBUCION PRINCIPAL */
 main{
-    display: inline-block;
-    width: 68%;
-    vertical-align: top;
+    display: grid;
+    grid-template-columns: 1fr 27%;
+    gap: 20px;
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
+    align-items: start;
 }
 
-aside{
-    display: inline-block;
-    width: 27%;
-    vertical-align: top;
-    background-color: #f5e9e3;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-top: 20px;
+/* CONTENIDO IZQUIERDO */
+.contenido{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
+/* ARTICULOS */
 article{
     background-color: white;
     margin: 15px;
@@ -98,6 +99,16 @@ article:hover{
     background-color: #f4dcd7;
 }
 
+/* APARTADO DERECHO */
+aside{
+    width: 100%;
+    vertical-align: top;
+    background-color: #f5e9e3;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
 aside img{
     width: 100%;
     border-radius: 10px;
@@ -115,6 +126,7 @@ aside p{
     margin-bottom: 20px;
 }
 
+/* PIE DE PAGINA */
 footer{
     background-color: #d9a6a0;
     color: white;
@@ -125,4 +137,17 @@ footer{
 
 footer a{
     color: white;
+}
+
+/* DISEÑO PARA CELULARES */
+@media (max-width: 700px){
+
+    main{
+        grid-template-columns: 1fr;
+    }
+
+    aside{
+        margin-top: 10px;
+    }
+
 }
